@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product system</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="w-75 p-3 mx-auto bg-gradient shadow rounded-3">
+        <H1 class="text-center">
+            Product System Managment
+        </H1>
+        <div class="">
+            <label for="productNameInput"> PRODUCT NAME</label>
+            <input type="text" oninput="validation()" class="form-control" id="productNameInput">
+            <div id="messageName" class="alert alert-danger d-none">you should type caapital first letter and from 3 to 8 small letter</div>
+        </div>
+            <div class="">
+            <label for="productPriceInput"> PRODUCT PRICE</label>
+            <input type="number" class="form-control" id="productPriceInput">
+        </div>
+            <div class="">
+            <label for="productCategoryInput"> PRODUCT CATEGORY</label>
+            <input type="text" class="form-control" id="productCategoryInput">
+        </div>
+            <div class="">
+            <label for="productDescInput"> PRODUCT DESCRIPTION</label>
+            <textarea class="form-control" id="productDescInput"> </textarea>
+        </div>
+        <BUtton id="addBtn"  onclick= "addProduct()" class="btn btn-primary w-100 my-3">ADD PRODUCT</BUtton>
+        <BUtton id="updateBtn" onclick="updateProduct()" class="btn btn-primary w-100 my-3 d-none">UPDATE PRODUCT</BUtton>
+
+        <input id="searchInput" oninput="search()" type="search" class="form-control m-3 w-75 mx-auto" placeholder="search by name...">
+        <table class="table text-center">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Name</td>
+                    <td>Price</td>
+                    <td>Category</td>
+                    <td>Description</td>
+                    <td>Action</td>
+                    
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+    </div> 
+    <div class="center"></div>
+
+
+
+
+
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
